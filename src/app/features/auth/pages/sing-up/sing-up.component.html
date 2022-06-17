@@ -1,1 +1,13 @@
-<p>sing-up works!</p>
+<div class="container">
+  <form class="form-group" [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+    <label for="username">User name</label>
+    <input type="text" id="username" class="form-control" placeholder="Enter your user name"
+           formControlName="username">
+
+    <label for="password">Password</label>
+    <input type="password" id="password" class="form-control" placeholder="Enter your password"
+           formControlName="password">
+    <button type="submit" class="btn btn-primary" [disabled]="!signUpForm.valid">Submit</button>
+  </form>
+</div>
+
